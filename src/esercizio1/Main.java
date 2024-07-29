@@ -24,7 +24,7 @@ public class Main {
             logger.error("il numero non è corretto, deve essere da 1 a 10");
             return;
         }
-        System.out.println("inserisci la posizione da 1 a 10");
+        System.out.println("inserisci la posizione da 1 a 5");
         int position = Integer.parseInt(scanner.nextLine());
         if (position < 1 || position > 5) {
             logger.error("errore, la posizione deve essere tra 1 e 5");

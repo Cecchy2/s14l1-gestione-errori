@@ -15,13 +15,13 @@ public class Main {
 
         for (int i = 0; i < casualArray.length; i++) {
             casualArray[i] = random.nextInt(10) + 1;
-            System.out.println(casualArray[i]);
+            logger.info(String.valueOf(casualArray[i]));
         }
         Scanner scanner = new Scanner(System.in);
         System.out.println("inserisci un numero da 1 a 10");
         int number = Integer.parseInt(scanner.nextLine());
         if (number > 10 || number < 1) {
-            System.out.println("il numero non è corretto, deve essere da 1 a 10");
+            logger.error("il numero non è corretto, deve essere da 1 a 10");
             return;
         }
         System.out.println("inserisci la posizione da 1 a 10");
@@ -32,7 +32,7 @@ public class Main {
         }
         casualArray[position - 1] = number;
         for (int i = 0; i < casualArray.length; i++) {
-            System.out.println(casualArray[i]);
+            logger.info(String.valueOf(casualArray[i]));
             logger.info(
                     String.valueOf(casualArray[i])
             );

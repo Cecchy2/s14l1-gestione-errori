@@ -1,9 +1,14 @@
 package esercizio1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         Random random = new Random(10);
         int[] casualArray = new int[5];
@@ -22,13 +27,17 @@ public class Main {
         System.out.println("inserisci la posizione da 1 a 10");
         int position = Integer.parseInt(scanner.nextLine());
         if (position < 1 || position > 5) {
-            System.out.println("errore, la posizione deve essere tra 1 e 5");
+            logger.error("errore, la posizione deve essere tra 1 e 5");
             return;
         }
         casualArray[position - 1] = number;
         for (int i = 0; i < casualArray.length; i++) {
             System.out.println(casualArray[i]);
+            logger.info(
+                    String.valueOf(casualArray[i])
+            );
 
         }
     }
+
 }

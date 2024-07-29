@@ -14,17 +14,19 @@ public class Main {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("inserisci i km ");
-            double km = Integer.parseInt(scanner.nextLine());
+            int km = Integer.parseInt(scanner.nextLine());
             System.out.println("inserisci i litri");
-            double litri = Integer.parseInt(scanner.nextLine());
+            int litri = Integer.parseInt(scanner.nextLine());
 
-            double kmAlLitro = km / litri;
+            int kmAlLitro = km / litri;
             logger.info("i km per litro sono: " + kmAlLitro);
         } catch (ArithmeticException e) {
             logger.error("Errore del calcolo" + e.getMessage());
         } catch (NumberFormatException e) {
             logger.error("Errore, devi inserire un numero non una lettera" + e.getMessage()
             );
+        } catch (Exception e) {
+            logger.error(e.getMessage());
         }
 
     }

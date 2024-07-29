@@ -27,7 +27,7 @@ public class Main {
         System.out.println("inserisci la posizione da 1 a 5");
         int position = Integer.parseInt(scanner.nextLine());
         if (position < 1 || position > 5) {
-            logger.error("errore, la posizione deve essere tra 1 e 5");
+            logger.error("errore, la posizione deve essere compresa tra 1 e 5");
             return;
         }
         casualArray[position - 1] = number;

@@ -1,8 +1,12 @@
 package esercizio2;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class Main {
+    private static Logger logger = LoggerFactory.getLogger(esercizio1.Main.class);
 
     public static void main(String[] args) {
 
@@ -15,11 +19,11 @@ public class Main {
             double litri = Integer.parseInt(scanner.nextLine());
 
             double kmAlLitro = km / litri;
-            System.out.println("i km per litro sono: " + kmAlLitro);
+            logger.info("i km per litro sono: " + kmAlLitro);
         } catch (ArithmeticException e) {
-            System.out.println("Errore del calcolo" + e.getMessage());
+            logger.error("Errore del calcolo" + e.getMessage());
         } catch (NumberFormatException e) {
-            System.out.println("Errore, devi inserire un numero non una lettera" + e.getMessage()
+            logger.error("Errore, devi inserire un numero non una lettera" + e.getMessage()
             );
         }
 

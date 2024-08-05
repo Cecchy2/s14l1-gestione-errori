@@ -3,6 +3,7 @@ package esercizio1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,8 +16,10 @@ public class Main {
 
         for (int i = 0; i < casualArray.length; i++) {
             casualArray[i] = random.nextInt(10) + 1;
-            logger.info(String.valueOf(casualArray[i]));
+
         }
+        logger.info(Arrays.toString(casualArray));
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("inserisci un numero da 1 a 10");
         int number = Integer.parseInt(scanner.nextLine());
@@ -32,12 +35,8 @@ public class Main {
         }
         casualArray[position - 1] = number;
         for (int i = 0; i < casualArray.length; i++) {
-            logger.info(String.valueOf(casualArray[i]));
-            logger.info(
-                    String.valueOf(casualArray[i])
-            );
-
         }
+        logger.info(Arrays.toString(casualArray));
         scanner.close();
     }
 
